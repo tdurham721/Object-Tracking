@@ -1,1 +1,3 @@
-# Object-Tracking
+This program uses the OpenCV 2.4 library to detect and outline motion in a live video captured from a webcam. It does this by using an algorithm that stores the initial frame of the video as a reference image, then it checks following frames for changes in pixel values. If the pixel values change by a certain threshold, they are marked as no longer being part of the background and therefore are part of the foreground. The algorithm can also be used to detect shadows that move in the image, but I didn't use this. OpenCV implements a lot of this for you. (See the paper located here: http://personal.ee.surrey.ac.uk/Personal/R.Bowden/publications/avbs01/avbs01.pdf) The code also contains a section to outline the detected foreground for easier identification.
+
+The documentation for the BackgroundSubtractorMOG2 class can be found here: http://docs.opencv.org/modules/video/doc/motion_analysis_and_object_tracking.html
